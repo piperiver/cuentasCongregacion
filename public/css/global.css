@@ -1,0 +1,105 @@
+@media (max-width: 768px) {
+  .navbar-header{
+    background: #373433;
+  }
+  .navbar-default .navbar-brand{
+    color: #ddd !important;
+  }
+  .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+    color: #ffffff;
+  }
+  .navbar-default .navbar-toggle:hover{
+    background-color: #4b4847;
+  }
+  .navbar-default .navbar-toggle .icon-bar{
+    background-color: #ffffff;
+  }
+  .descripcionHora{
+    text-align: center;
+  }
+}
+.nombreCongregacion{
+  margin: 5px 0 5px;
+  text-align: center;
+  font-weight: bold;
+}
+.navbar-default .navbar-brand{
+  color: #000000;
+  font-weight: bold;
+}
+.pointer{
+  cursor: pointer;
+}
+.margin-bottom-10{
+  margin-bottom: 10px;
+}
+.margin-top-10{
+  margin-top: 10px;
+}
+.panel-purple > a {
+  color: #AA70C4;
+}
+.panel-purple{
+  border-color: #AA70C4;
+}
+.panel-purple>.panel-heading {
+    color: #fff;
+    background-color: #AA70C4;
+    border-color: #AA70C4;
+}
+.table>tbody>tr.purple>td, .table>tbody>tr.purple>th, .table>tbody>tr>td.purple, .table>tbody>tr>th.purple,
+.table>tfoot>tr.purple>td, .table>tfoot>tr.purple>th, .table>tfoot>tr>td.purple, .table>tfoot>tr>th.purple,
+.table>thead>tr.purple>td, .table>thead>tr.purple>th, .table>thead>tr>td.purple, .table>thead>tr>th.purple{
+  background-color: #d4b7e1;
+}
+.titleListCarpetas{
+  border-top: 1px solid #e7e7e7;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-left: 15px;
+  margin: 0;
+}
+.btnAgregarCarpetas{
+  text-align: center;
+  display: block;
+  padding: 7px;
+  background: #337ab7;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.btnAgregarCarpetas:hover{
+  background: #337ab7;
+  text-decoration: none;
+  color: #fff;
+}
+.panel-default>.panel-heading{
+  background: #286192;
+  color: #fff;
+  border-color: #286192;
+}
+.panel-default{
+  border-color: #286192;
+}
+.btn-guardar{
+  background: #337ab7;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #000;
+}
+.btn-cerrar{
+  background: #a3a3a3;
+  border: 1px solid #000;
+  color: #fff;
+  font-weight: bold;
+}
+.color-black{
+  color: #323232;
+  font-weight: bold;
+  font-style: italic;
+}
+.color-black:hover, .color-black:active{
+  color: #000000 !important;
+  text-decoration: none !important;
+}

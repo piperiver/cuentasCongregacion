@@ -1,0 +1,1085 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+<style>body{padding:0px;margin:0px;background-color:#65c59c;}
+#FDFXFA_Menu{text-align:center;width:100%;z-index:9999;color:white;background-color:#33966d;position:fixed;margin:0px;padding:10px; opacity:0.8;top:0px;min-width:300px;}
+#FDFXFA_Menu a{padding:5px ;cursor:pointer; border:groove 2px white; border-radius:5px; font-family: IDRSymbols; font-size:20px; margin:5px 10px 5px 10px;}
+#FDFXFA_Menu a:hover{background-color:darkgreen;}
+@media print {#FDFXFA_Menu a{display:none}}
+#FDFXFA_PageLabel{min-width:20px;display:inline-block;}
+#FDFXFA_Processing{width:100%; height:100%; z-index:10000; position:fixed; background-color:black; opacity:0.8; color:white; top:0px;text-align: center; font-size:300px; font-family:IDRSymbols;}
+#FDFXFA_Processing span{top:50%;left:50%;position:absolute;margin:-50px 0 0 -50px}
+#FDFXFA_FormType,#FDFXFA_Form,#FDFXFA_PDFName,#FDFXFA_FormSubmitURL{display:none;}
+@font-face {font-family:'IDRSymbols'; src: url(data:application/x-font-woff;charset=utf-8;base64,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) format('woff'); font-weight:normal; font-style:normal;}
+</style>
+</head>
+
+<body style="margin: 0;">
+<div id="p1" class="pageArea" style="overflow: hidden; position: relative; width: 909px; height: 1286px; margin-top:20px; margin-left:auto; margin-right:auto; ">
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:69px;top:104px;letter-spacing:-1.3px;}
+#t2_1{left:188px;top:104px;letter-spacing:-1.3px;word-spacing:4px;}
+#t3_1{left:386px;top:95px;}
+#t4_1{left:382px;top:104px;letter-spacing:-1.3px;word-spacing:4.1px;}
+#t5_1{left:801px;top:95px;}
+#t6_1{left:797px;top:104px;letter-spacing:-0.7px;word-spacing:2.7px;}
+#t7_1{left:69px;top:122px;letter-spacing:-1.5px;word-spacing:6.1px;}
+#t8_1{left:191px;top:113px;}
+#t9_1{left:187px;top:122px;letter-spacing:-1.2px;word-spacing:5.1px;}
+#ta_1{left:661px;top:113px;}
+#tb_1{left:657px;top:122px;letter-spacing:-0.9px;word-spacing:5.4px;}
+#tc_1{left:69px;top:140px;letter-spacing:-0.7px;word-spacing:8px;}
+#td_1{left:124px;top:130px;}
+#te_1{left:121px;top:140px;letter-spacing:-1.3px;word-spacing:9px;}
+#tf_1{left:612px;top:130px;}
+#tg_1{left:608px;top:140px;letter-spacing:-1.2px;word-spacing:8.5px;}
+#th_1{left:69px;top:157px;letter-spacing:-1px;word-spacing:5.6px;}
+#ti_1{left:118px;top:157px;letter-spacing:-1.9px;word-spacing:7px;}
+#tj_1{left:247px;top:157px;letter-spacing:-1.3px;}
+#tk_1{left:69px;top:215px;letter-spacing:-1.2px;}
+#tl_1{left:156px;top:206px;}
+#tm_1{left:152px;top:215px;letter-spacing:-1.3px;}
+#tn_1{left:180px;top:215px;letter-spacing:-2.6px;}
+#to_1{left:550px;top:215px;letter-spacing:-1.6px;}
+#tp_1{left:598px;top:206px;}
+#tq_1{left:593px;top:215px;letter-spacing:-1.3px;}
+#tr_1{left:622px;top:215px;letter-spacing:-2.6px;}
+#ts_1{left:272px;top:277px;letter-spacing:-0.2px;word-spacing:5.8px;}
+#tt_1{left:620px;top:265px;}
+#tu_1{left:614px;top:277px;letter-spacing:-0.1px;}
+#tv_1{left:69px;top:333px;letter-spacing:-1.5px;word-spacing:3.3px;}
+#tw_1{left:247px;top:324px;}
+#tx_1{left:243px;top:333px;letter-spacing:-1.4px;}
+#ty_1{left:69px;top:349px;letter-spacing:-1.3px;word-spacing:2.4px;}
+#tz_1{left:370px;top:334px;letter-spacing:-0.1px;word-spacing:0.1px;}
+#t10_1{left:370px;top:346px;letter-spacing:-0.3px;word-spacing:0.4px;}
+#t11_1{left:487px;top:340px;}
+#t12_1{left:484px;top:346px;letter-spacing:-0.1px;word-spacing:0.2px;}
+#t13_1{left:370px;top:357px;letter-spacing:-0.1px;word-spacing:0.3px;}
+#t14_1{left:546px;top:351px;}
+#t15_1{left:543px;top:357px;letter-spacing:-0.3px;word-spacing:0.1px;}
+#t16_1{left:709px;top:345px;}
+#t17_1{left:721px;top:343px;}
+#t18_1{left:731px;top:343px;letter-spacing:-2.6px;}
+#t19_1{left:822px;top:343px;letter-spacing:-1.3px;}
+#t1a_1{left:69px;top:405px;letter-spacing:-0.1px;word-spacing:5.4px;}
+#t1b_1{left:329px;top:392px;}
+#t1c_1{left:323px;top:405px;letter-spacing:-0.1px;}
+#t1d_1{left:86px;top:439px;letter-spacing:-2.6px;}
+#t1e_1{left:464px;top:439px;}
+#t1f_1{left:476px;top:439px;letter-spacing:-2.6px;}
+#t1g_1{left:86px;top:466px;letter-spacing:-2.6px;}
+#t1h_1{left:476px;top:466px;letter-spacing:-2.6px;}
+#t1i_1{left:86px;top:494px;letter-spacing:-2.6px;}
+#t1j_1{left:476px;top:494px;letter-spacing:-2.6px;}
+#t1k_1{left:86px;top:521px;letter-spacing:-2.6px;}
+#t1l_1{left:476px;top:521px;letter-spacing:-2.6px;}
+#t1m_1{left:86px;top:549px;letter-spacing:-2px;word-spacing:1.1px;}
+#t1n_1{left:593px;top:549px;}
+#t1o_1{left:606px;top:549px;letter-spacing:-2.6px;}
+#t1p_1{left:700px;top:549px;letter-spacing:-1.4px;}
+#t1q_1{left:69px;top:587px;letter-spacing:-0.7px;word-spacing:6.7px;}
+#t1r_1{left:303px;top:575px;}
+#t1s_1{left:298px;top:587px;letter-spacing:-0.1px;}
+#t1t_1{left:86px;top:628px;letter-spacing:-2.6px;}
+#t1u_1{left:464px;top:628px;}
+#t1v_1{left:476px;top:628px;letter-spacing:-2.6px;}
+#t1w_1{left:86px;top:656px;letter-spacing:-2.6px;}
+#t1x_1{left:476px;top:656px;letter-spacing:-2.6px;}
+#t1y_1{left:86px;top:683px;letter-spacing:-2.6px;}
+#t1z_1{left:476px;top:683px;letter-spacing:-2.6px;}
+#t20_1{left:86px;top:711px;letter-spacing:-2.6px;}
+#t21_1{left:476px;top:711px;letter-spacing:-2.6px;}
+#t22_1{left:86px;top:738px;letter-spacing:-2.6px;}
+#t23_1{left:476px;top:738px;letter-spacing:-2.6px;}
+#t24_1{left:86px;top:765px;letter-spacing:-2.6px;}
+#t25_1{left:476px;top:765px;letter-spacing:-2.6px;}
+#t26_1{left:86px;top:793px;letter-spacing:-2.6px;}
+#t27_1{left:476px;top:793px;letter-spacing:-2.6px;}
+#t28_1{left:86px;top:820px;letter-spacing:-2.6px;}
+#t29_1{left:476px;top:820px;letter-spacing:-2.6px;}
+#t2a_1{left:86px;top:848px;letter-spacing:-2px;word-spacing:1.6px;}
+#t2b_1{left:593px;top:848px;}
+#t2c_1{left:606px;top:848px;letter-spacing:-2.6px;}
+#t2d_1{left:701px;top:848px;letter-spacing:-1.4px;}
+#t2e_1{left:69px;top:875px;letter-spacing:-1.3px;word-spacing:-0.3px;}
+#t2f_1{left:155px;top:866px;}
+#t2g_1{left:151px;top:875px;letter-spacing:-1px;word-spacing:0.2px;}
+#t2h_1{left:716px;top:875px;}
+#t2i_1{left:730px;top:875px;letter-spacing:-2.6px;}
+#t2j_1{left:821px;top:875px;letter-spacing:-1.3px;}
+#t2k_1{left:69px;top:902px;letter-spacing:-1.5px;word-spacing:0.3px;}
+#t2l_1{left:245px;top:893px;}
+#t2m_1{left:241px;top:902px;letter-spacing:-1px;word-spacing:-0.7px;}
+#t2n_1{left:376px;top:902px;}
+#t2o_1{left:390px;top:902px;letter-spacing:-1.3px;}
+#t2p_1{left:417px;top:905px;letter-spacing:-1.1px;}
+#t2q_1{left:465px;top:897px;}
+#t2r_1{left:462px;top:905px;letter-spacing:-1px;word-spacing:2.1px;}
+#t2s_1{left:716px;top:902px;}
+#t2t_1{left:728px;top:902px;letter-spacing:-2.6px;}
+#t2u_1{left:823px;top:902px;letter-spacing:-1.4px;}
+#t2v_1{left:69px;top:934px;letter-spacing:-0.3px;word-spacing:5.7px;}
+#t2w_1{left:307px;top:922px;}
+#t2x_1{left:301px;top:934px;letter-spacing:-0.7px;word-spacing:6.1px;}
+#t2y_1{left:86px;top:965px;letter-spacing:-2.6px;}
+#t2z_1{left:464px;top:965px;}
+#t30_1{left:476px;top:965px;letter-spacing:-2.6px;}
+#t31_1{left:86px;top:992px;letter-spacing:-2.6px;}
+#t32_1{left:476px;top:992px;letter-spacing:-2.6px;}
+#t33_1{left:86px;top:1020px;letter-spacing:-2.6px;}
+#t34_1{left:476px;top:1020px;letter-spacing:-2.6px;}
+#t35_1{left:86px;top:1060px;letter-spacing:-1.5px;word-spacing:3.4px;}
+#t36_1{left:593px;top:1060px;}
+#t37_1{left:608px;top:1060px;letter-spacing:-2.6px;}
+#t38_1{left:703px;top:1060px;letter-spacing:-1.2px;}
+#t39_1{left:69px;top:1119px;letter-spacing:-1.2px;word-spacing:3px;}
+#t3a_1{left:492px;top:1110px;}
+#t3b_1{left:488px;top:1119px;letter-spacing:-0.9px;word-spacing:2.3px;}
+#t3c_1{left:716px;top:1119px;}
+#t3d_1{left:731px;top:1119px;letter-spacing:-2.6px;}
+#t3e_1{left:822px;top:1119px;letter-spacing:-1.3px;}
+#t3f_1{left:157px;top:70px;letter-spacing:-0.6px;word-spacing:9px;}
+#t3g_1{left:731px;top:56px;}
+#t3h_1{left:724px;top:70px;letter-spacing:-0.3px;}
+#t3i_1{left:69px;top:1201px;word-spacing:4.6px;}
+#t3j_1{left:139px;top:1201px;letter-spacing:-0.1px;}
+
+.s1_1{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WtRegalIIBoldkHmAXfg_4a;
+	color: rgb(0,0,0);
+}
+
+.s2_1{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WtRegalIIBookkHmAXfg_4c;
+	color: rgb(0,0,0);
+}
+
+.s3_1{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WtRegalIIItalickHmAXfg_4e;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WtUtSerifBookkHmAXfg_4g;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 60.8px;
+	FONT-FAMILY: WtHelveticaMediumkHmAXfg_4i;
+	color: rgb(0,0,0);
+}
+
+.s6_1{
+	FONT-SIZE: 36.5px;
+	FONT-FAMILY: WtRegalIIBookkHmAXfg_4c;
+	color: rgb(0,0,0);
+}
+
+.s7_1{
+	FONT-SIZE: 36.5px;
+	FONT-FAMILY: WtOnOrnamentkHmAXfg_4k;
+	color: rgb(0,0,0);
+}
+
+.s8_1{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WtMtBookkHmAXfg_4m;
+	color: rgb(0,0,0);
+}
+
+.s9_1{
+	FONT-SIZE: 49.9px;
+	FONT-FAMILY: WtRegalIIBookkHmAXfg_4c;
+	color: rgb(0,0,0);
+}
+
+.s10_1{
+	FONT-SIZE: 63.9px;
+	FONT-FAMILY: WtRegalIIBoldkHmAXfg_4a;
+	color: rgb(0,0,0);
+}
+
+.s11_1{
+	FONT-SIZE: 46.9px;
+	FONT-FAMILY: WtRegalIIBookkHmAXfg_4c;
+	color: rgb(0,0,0);
+}
+
+#form1_1{	z-index:2;	position: absolute;	left:729px;	top:891px;	width:89px;	height:20px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 18px Arial, Helvetica, sans-serif;}
+#form2_1{	z-index:2;	position: absolute;	left:477px;	top:455px;	width:90px;	height:20px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 18px Arial, Helvetica, sans-serif;}
+#form3_1{	z-index:2;	position: absolute;	left:477px;	top:617px;	width:90px;	height:20px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 18px Arial, Helvetica, sans-serif;}
+#form4_1{	z-index:2;	position: absolute;	left:477px;	top:426px;	width:90px;	height:20px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 18px Arial, Helvetica, sans-serif;}
+#form5_1{	z-index:2;	position: absolute;	left:477px;	top:952px;	width:90px;	height:20px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 18px Arial, Helvetica, sans-serif;}
+#form6_1{	z-index:2;	position: absolute;	left:477px;	top:981px;	width:90px;	height:20px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 18px Arial, Helvetica, sans-serif;}
+#form7_1{	z-index:2;	position: absolute;	left:477px;	top:645px;	width:90px;	height:20px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 18px Arial, Helvetica, sans-serif;}
+#form8_1{	z-index:2;	position: absolute;	left:477px;	top:1007px;	width:90px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form9_1{	z-index:2;	position: absolute;	left:477px;	top:724px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form10_1{	z-index:2;	position: absolute;	left:477px;	top:807px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form11_1{	z-index:2;	position: absolute;	left:477px;	top:669px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form12_1{	z-index:2;	position: absolute;	left:477px;	top:779px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form13_1{	z-index:2;	position: absolute;	left:477px;	top:697px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form14_1{	z-index:2;	position: absolute;	left:477px;	top:752px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form15_1{	z-index:2;	position: absolute;	left:477px;	top:480px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form16_1{	z-index:2;	position: absolute;	left:477px;	top:507px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form17_1{	z-index:2;	position: absolute;	left:730px;	top:1103px;	width:86px;	height:25px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 22px Arial, Helvetica, sans-serif;}
+#form18_1{	z-index:2;	position: absolute;	left:608px;	top:831px;	width:86px;	height:26px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form19_1{	z-index:2;	position: absolute;	left:608px;	top:530px;	width:86px;	height:26px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form20_1{	z-index:2;	position: absolute;	left:732px;	top:324px;	width:86px;	height:26px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form21_1{	z-index:2;	position: absolute;	left:730px;	top:856px;	width:87px;	height:26px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form22_1{	z-index:2;	position: absolute;	left:610px;	top:1042px;	width:87px;	height:26px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form23_1{	z-index:2;	position: absolute;	left:622px;	top:202px;	width:217px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form24_1{	z-index:2;	position: absolute;	left:87px;	top:616px;	width:324px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form25_1{	z-index:2;	position: absolute;	left:87px;	top:1007px;	width:324px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form26_1{	z-index:2;	position: absolute;	left:87px;	top:979px;	width:324px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form27_1{	z-index:2;	position: absolute;	left:87px;	top:426px;	width:324px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form28_1{	z-index:2;	position: absolute;	left:87px;	top:952px;	width:324px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form29_1{	z-index:2;	position: absolute;	left:87px;	top:642px;	width:324px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form30_1{	z-index:2;	position: absolute;	left:87px;	top:807px;	width:324px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form31_1{	z-index:2;	position: absolute;	left:87px;	top:779px;	width:324px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form32_1{	z-index:2;	position: absolute;	left:87px;	top:452px;	width:324px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form33_1{	z-index:2;	position: absolute;	left:87px;	top:752px;	width:324px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form34_1{	z-index:2;	position: absolute;	left:87px;	top:724px;	width:324px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form35_1{	z-index:2;	position: absolute;	left:87px;	top:507px;	width:324px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form36_1{	z-index:2;	position: absolute;	left:87px;	top:697px;	width:324px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form37_1{	z-index:2;	position: absolute;	left:87px;	top:669px;	width:324px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form38_1{	z-index:2;	position: absolute;	left:87px;	top:480px;	width:324px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form39_1{	z-index:2;	position: absolute;	left:180px;	top:202px;	width:364px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts1" type="text/css" >
+
+@font-face {
+	font-family: WtOnOrnamentkHmAXfg_4k;
+	src: url("fonts/WtOnOrnamentkHmAXfg_4k.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtRegalIIItalickHmAXfg_4e;
+	src: url("fonts/WtRegalIIItalickHmAXfg_4e.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtHelveticaMediumkHmAXfg_4i;
+	src: url("fonts/WtHelveticaMediumkHmAXfg_4i.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtUtSerifBookkHmAXfg_4g;
+	src: url("fonts/WtUtSerifBookkHmAXfg_4g.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtRegalIIBoldkHmAXfg_4a;
+	src: url("fonts/WtRegalIIBoldkHmAXfg_4a.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtRegalIIBookkHmAXfg_4c;
+	src: url("fonts/WtRegalIIBookkHmAXfg_4c.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtMtBookkHmAXfg_4m;
+	src: url("fonts/WtMtBookkHmAXfg_4m.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1" style="-webkit-user-select: none;"><object width="909" height="1286" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:909px; height:1286px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">Instrucciones:</div>
+<div id="t2_1" class="t s2_1">Antes de la segunda Reuni</div>
+<div id="t3_1" class="t s2_1">´</div>
+<div id="t4_1" class="t s2_1">on de Servicio de cada mes, el siervo de cuentas preparar</div>
+<div id="t5_1" class="t s2_1">´</div>
+<div id="t6_1" class="t s2_1">a este</div>
+<div id="t7_1" class="t s2_1">informe y le dar</div>
+<div id="t8_1" class="t s2_1">´</div>
+<div id="t9_1" class="t s2_1">a una copia al coordinador del cuerpo de ancianos, quien revisar</div>
+<div id="ta_1" class="t s2_1">´</div>
+<div id="tb_1" class="t s2_1">a el anuncio que aparece</div>
+<div id="tc_1" class="t s2_1">en la p</div>
+<div id="td_1" class="t s2_1">´</div>
+<div id="te_1" class="t s2_1">agina 2. El siervo de cuentas debe archivar el informe en su versi</div>
+<div id="tf_1" class="t s2_1">´</div>
+<div id="tg_1" class="t s2_1">on original en el archivo actual</div>
+<div id="th_1" class="t s2_1">con la</div>
+<div id="ti_1" class="t s3_1">Hoja de cuentas</div>
+<div id="tj_1" class="t s2_1">(S-26).</div>
+<div id="tk_1" class="t s2_1">Congregaci</div>
+<div id="tl_1" class="t s2_1">´</div>
+<div id="tm_1" class="t s2_1">on:</div>
+<div id="tn_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="to_1" class="t s2_1">Mes/a</div>
+<div id="tp_1" class="t s2_1">˜</div>
+<div id="tq_1" class="t s2_1">no:</div>
+<div id="tr_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="ts_1" class="t s5_1">INFORME FINANCIERO DE LA CONGREGACI</div>
+<div id="tt_1" class="t s5_1">´</div>
+<div id="tu_1" class="t s5_1">ON</div>
+<div id="tv_1" class="t s2_1">Fondos de la congregaci</div>
+<div id="tw_1" class="t s2_1">´</div>
+<div id="tx_1" class="t s2_1">on</div>
+<div id="ty_1" class="t s2_1">a comienzo de mes</div>
+<div id="tz_1" class="t s6_1">Esta cifra debe ser la misma que la que se encuentra en el apartado</div>
+<div id="t10_1" class="t s6_1">“Fondos de la congregaci</div>
+<div id="t11_1" class="t s6_1">´</div>
+<div id="t12_1" class="t s6_1">on a fin de mes” [cifra (e)], que aparece en</div>
+<div id="t13_1" class="t s6_1">el informe financiero de la congregaci</div>
+<div id="t14_1" class="t s6_1">´</div>
+<div id="t15_1" class="t s6_1">on del mes anterior.</div>
+<div id="t16_1" class="t s7_1">)</div>
+<div id="t17_1" class="t s2_1">$</div>
+<div id="t18_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t19_1" class="t s2_1">(a)</div>
+<div id="t1a_1" class="t s5_1">RECIBIDO POR LA CONGREGACI</div>
+<div id="t1b_1" class="t s5_1">´</div>
+<div id="t1c_1" class="t s5_1">ON:</div>
+<div id="t1d_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1e_1" class="t s2_1">$</div>
+<div id="t1f_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1g_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1h_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1i_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1j_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1k_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1l_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1m_1" class="t s2_1">Total recibido</div>
+<div id="t1n_1" class="t s2_1">$</div>
+<div id="t1o_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1p_1" class="t s2_1">(b)</div>
+<div id="t1q_1" class="t s5_1">GASTOS DE LA CONGREGACI</div>
+<div id="t1r_1" class="t s5_1">´</div>
+<div id="t1s_1" class="t s5_1">ON:</div>
+<div id="t1t_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1u_1" class="t s2_1">$</div>
+<div id="t1v_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1w_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1x_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1y_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1z_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t20_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t21_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t22_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t23_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t24_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t25_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t26_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t27_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t28_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t29_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t2a_1" class="t s2_1">Total de gastos</div>
+<div id="t2b_1" class="t s2_1">$</div>
+<div id="t2c_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t2d_1" class="t s2_1">(c)</div>
+<div id="t2e_1" class="t s2_1">Sobrante (d</div>
+<div id="t2f_1" class="t s2_1">´</div>
+<div id="t2g_1" class="t s2_1">eficit) [(b) – (c)]</div>
+<div id="t2h_1" class="t s2_1">$</div>
+<div id="t2i_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t2j_1" class="t s2_1">(d)</div>
+<div id="t2k_1" class="t s2_1">Fondos de la congregaci</div>
+<div id="t2l_1" class="t s2_1">´</div>
+<div id="t2m_1" class="t s2_1">on a fin de mes [(a)</div>
+<div id="t2n_1" class="t s8_1">±</div>
+<div id="t2o_1" class="t s2_1">(d)]</div>
+<div id="t2p_1" class="t s9_1">(transfi</div>
+<div id="t2q_1" class="t s9_1">´</div>
+<div id="t2r_1" class="t s9_1">eralos al mes siguiente)</div>
+<div id="t2s_1" class="t s2_1">$</div>
+<div id="t2t_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t2u_1" class="t s2_1">(e)</div>
+<div id="t2v_1" class="t s5_1">FONDOS DE LA CONGREGACI</div>
+<div id="t2w_1" class="t s5_1">´</div>
+<div id="t2x_1" class="t s5_1">ON RESERVADOS PARA USO ESPECIAL:</div>
+<div id="t2y_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t2z_1" class="t s2_1">$</div>
+<div id="t30_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t31_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t32_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t33_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t34_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t35_1" class="t s2_1">Total de los fondos reservados para uso especial</div>
+<div id="t36_1" class="t s2_1">$</div>
+<div id="t37_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t38_1" class="t s2_1">(f)</div>
+<div id="t39_1" class="t s2_1">Fondos disponibles para cubrir los gastos de la congregaci</div>
+<div id="t3a_1" class="t s2_1">´</div>
+<div id="t3b_1" class="t s2_1">on [(e) – (f)]</div>
+<div id="t3c_1" class="t s2_1">$</div>
+<div id="t3d_1" class="t s4_1">±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t3e_1" class="t s2_1">(g)</div>
+<div id="t3f_1" class="t s10_1">INFORME MENSUAL DE LAS CUENTAS DE LA CONGREGACI</div>
+<div id="t3g_1" class="t s10_1">´</div>
+<div id="t3h_1" class="t s10_1">ON</div>
+<div id="t3i_1" class="t s11_1">S-30-S Co</div>
+<div id="t3j_1" class="t s11_1">3/13</div>
+
+<!-- End text definitions -->
+
+
+<!-- Begin Form Data -->
+<form>
+<input type="text"  tabindex="31"  id="form1_1" value="" data-objref="145 0 R" title="undefined"  data-field-name="undefined"/>
+<input type="text"  tabindex="7"  id="form2_1" value="" data-objref="121 0 R" title="[1]"  data-field-name="1"/>
+<input type="text"  tabindex="14"  id="form3_1" value="" data-objref="128 0 R" title="[4]"  data-field-name="4"/>
+<input type="text"  tabindex="5"  id="form4_1" value="" data-objref="119 0 R" title="[1]"  data-field-name="0"/>
+<input type="text"  tabindex="33"  id="form5_1" value="" data-objref="147 0 R" title="[1]"  data-field-name="12"/>
+<input type="text"  tabindex="35"  id="form6_1" value="" data-objref="149 0 R" title="[1]"  data-field-name="13"/>
+<input type="text"  tabindex="16"  id="form7_1" value="" data-objref="130 0 R" title="[5]"  data-field-name="5"/>
+<input type="text"  tabindex="37"  id="form8_1" value="" data-objref="151 0 R" title="[2]"  data-field-name="14"/>
+<input type="text"  tabindex="22"  id="form9_1" value="" data-objref="136 0 R" title="[4]"  data-field-name="8"/>
+<input type="text"  tabindex="28"  id="form10_1" value="" data-objref="142 0 R" title="[7]"  data-field-name="11"/>
+<input type="text"  tabindex="18"  id="form11_1" value="" data-objref="132 0 R" title="[6]"  data-field-name="6"/>
+<input type="text"  tabindex="26"  id="form12_1" value="" data-objref="140 0 R" title="[6]"  data-field-name="10"/>
+<input type="text"  tabindex="20"  id="form13_1" value="" data-objref="134 0 R" title="[7]"  data-field-name="7"/>
+<input type="text"  tabindex="24"  id="form14_1" value="" data-objref="138 0 R" title="[5]"  data-field-name="9"/>
+<input type="text"  tabindex="9"  id="form15_1" value="" data-objref="123 0 R" title="[2]"  data-field-name="2"/>
+<input type="text"  tabindex="11"  id="form16_1" value="" data-objref="125 0 R" title="[3]"  data-field-name="3"/>
+<input type="text"  tabindex="39"  id="form17_1" value="" data-objref="153 0 R" title="Esta cifra debe ser la misma que la que se encuentra en el apartado “Fondos de la congregaci on a fin de mes” [cifra (e)], que aparece en el informe financiero de la congregaci on del mes anterior."  data-field-name="Cifra 6"/>
+<input type="text"  tabindex="29"  id="form18_1" value="" data-objref="143 0 R" title="Esta cifra debe ser la misma que la que se encuentra en el apartado “Fondos de la congregaci on a fin de mes” [cifra (e)], que aparece en el informe financiero de la congregaci on del mes anterior."  data-field-name="Cifra 3"/>
+<input type="text"  tabindex="12"  id="form19_1" value="" data-objref="126 0 R" title="Esta cifra debe ser la misma que la que se encuentra en el apartado “Fondos de la congregaci on a fin de mes” [cifra (e)], que aparece en el informe financiero de la congregaci on del mes anterior."  data-field-name="Cifra 2"/>
+<input type="text"  tabindex="3"  id="form20_1" value="" data-objref="117 0 R" title="Esta cifra debe ser la misma que la que se encuentra en el apartado “Fondos de la congregaci on a fin de mes” [cifra (e)], que aparece en el informe financiero de la congregaci on del mes anterior."  data-field-name="Cifra 1"/>
+<input type="text"  tabindex="30"  id="form21_1" value="" data-objref="144 0 R" title="Esta cifra debe ser la misma que la que se encuentra en el apartado “Fondos de la congregaci on a fin de mes” [cifra (e)], que aparece en el informe financiero de la congregaci on del mes anterior."  data-field-name="Cifra 4"/>
+<input type="text"  tabindex="38"  id="form22_1" value="" data-objref="152 0 R" title="Esta cifra debe ser la misma que la que se encuentra en el apartado “Fondos de la congregaci on a fin de mes” [cifra (e)], que aparece en el informe financiero de la congregaci on del mes anterior."  data-field-name="Cifra 5"/>
+<input type="text"  tabindex="2"  id="form23_1" value="" data-objref="116 0 R" title="no"  data-field-name="no"/>
+<input type="text"  tabindex="13"  id="form24_1" value="" data-objref="127 0 R" title="GASTOS DE LA CONGREGACI [1]"  data-field-name="GASTOS DE LA CONGREGACI 1"/>
+<input type="text"  tabindex="36"  id="form25_1" value="" data-objref="150 0 R" title="FONDOS DE LA CONGREGACI [3]"  data-field-name="FONDOS DE LA CONGREGACI 3"/>
+<input type="text"  tabindex="34"  id="form26_1" value="" data-objref="148 0 R" title="FONDOS DE LA CONGREGACI [2]"  data-field-name="FONDOS DE LA CONGREGACI 2"/>
+<input type="text"  tabindex="4"  id="form27_1" value="" data-objref="118 0 R" title="RECIBIDO POR LA CONGREGACI [1]"  data-field-name="RECIBIDO POR LA CONGREGACI 1"/>
+<input type="text"  tabindex="32"  id="form28_1" value="" data-objref="146 0 R" title="FONDOS DE LA CONGREGACI [1]"  data-field-name="FONDOS DE LA CONGREGACI 1"/>
+<input type="text"  tabindex="15"  id="form29_1" value="" data-objref="129 0 R" title="GASTOS DE LA CONGREGACI [2]"  data-field-name="GASTOS DE LA CONGREGACI 2"/>
+<input type="text"  tabindex="27"  id="form30_1" value="" data-objref="141 0 R" title="GASTOS DE LA CONGREGACI [8]"  data-field-name="GASTOS DE LA CONGREGACI 8"/>
+<input type="text"  tabindex="25"  id="form31_1" value="" data-objref="139 0 R" title="GASTOS DE LA CONGREGACI [7]"  data-field-name="GASTOS DE LA CONGREGACI 7"/>
+<input type="text"  tabindex="6"  id="form32_1" value="" data-objref="120 0 R" title="RECIBIDO POR LA CONGREGACI [2]"  data-field-name="RECIBIDO POR LA CONGREGACI 2"/>
+<input type="text"  tabindex="23"  id="form33_1" value="" data-objref="137 0 R" title="GASTOS DE LA CONGREGACI [6]"  data-field-name="GASTOS DE LA CONGREGACI 6"/>
+<input type="text"  tabindex="21"  id="form34_1" value="" data-objref="135 0 R" title="GASTOS DE LA CONGREGACI [5]"  data-field-name="GASTOS DE LA CONGREGACI 5"/>
+<input type="text"  tabindex="10"  id="form35_1" value="" data-objref="124 0 R" title="RECIBIDO POR LA CONGREGACI [4]"  data-field-name="RECIBIDO POR LA CONGREGACI 4"/>
+<input type="text"  tabindex="19"  id="form36_1" value="" data-objref="133 0 R" title="GASTOS DE LA CONGREGACI [4]"  data-field-name="GASTOS DE LA CONGREGACI 4"/>
+<input type="text"  tabindex="17"  id="form37_1" value="" data-objref="131 0 R" title="GASTOS DE LA CONGREGACI [3]"  data-field-name="GASTOS DE LA CONGREGACI 3"/>
+<input type="text"  tabindex="8"  id="form38_1" value="" data-objref="122 0 R" title="RECIBIDO POR LA CONGREGACI [3]"  data-field-name="RECIBIDO POR LA CONGREGACI 3"/>
+<input type="text"  tabindex="1"  id="form39_1" value="" data-objref="115 0 R" title="Mes/a"  data-field-name="Mesa"/>
+
+</form>
+<!-- End Form Data -->
+<!--[if lt IE 9]><script type="text/javascript">
+(function(divCount, pageNum) {
+for (var i = 1; i < divCount; i++) {
+    var div = document.getElementById('t' + i.toString(36) + '_' + pageNum);
+    if (div !== null) {
+        div.style.top = (div.offsetTop * 4) + 'px';
+        div.style.left = (div.offsetLeft * 4) + 'px';
+        div.style.zoom = '25%';
+    }
+}
+})(128, 1);
+</script><![endif]-->
+
+</div>
+
+<div id="p2" class="pageArea" style="overflow: hidden; position: relative; width: 909px; height: 1286px; margin-top:20px; margin-left:auto; margin-right:auto; ">
+
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:396px;top:70px;letter-spacing:-0.3px;}
+#t2_2{left:496px;top:58px;}
+#t3_2{left:490px;top:70px;letter-spacing:-0.1px;}
+#t4_2{left:69px;top:115px;letter-spacing:-1.7px;word-spacing:3.7px;}
+#t5_2{left:362px;top:107px;letter-spacing:-0.1px;word-spacing:0.1px;}
+#t6_2{left:362px;top:119px;letter-spacing:-0.3px;word-spacing:0.5px;}
+#t7_2{left:362px;top:130px;}
+#t8_2{left:384px;top:124px;}
+#t9_2{left:381px;top:130px;letter-spacing:-0.3px;word-spacing:0.1px;}
+#ta_2{left:713px;top:119px;}
+#tb_2{left:721px;top:118px;}
+#tc_2{left:730px;top:118px;letter-spacing:-2.6px;}
+#td_2{left:821px;top:118px;letter-spacing:-1.3px;}
+#te_2{left:69px;top:161px;letter-spacing:-0.1px;}
+#tf_2{left:86px;top:192px;letter-spacing:-1.1px;word-spacing:-0.7px;}
+#tg_2{left:280px;top:183px;}
+#th_2{left:275px;top:192px;letter-spacing:-1px;word-spacing:-2.3px;}
+#ti_2{left:408px;top:183px;}
+#tj_2{left:405px;top:192px;letter-spacing:-1px;word-spacing:-1.1px;}
+#tk_2{left:476px;top:192px;letter-spacing:-2.6px;}
+#tl_2{left:86px;top:222px;letter-spacing:-1.4px;word-spacing:0.3px;}
+#tm_2{left:103px;top:251px;letter-spacing:-1px;word-spacing:-1px;}
+#tn_2{left:476px;top:251px;letter-spacing:-2.6px;}
+#to_2{left:103px;top:280px;letter-spacing:-0.9px;word-spacing:-1.1px;}
+#tp_2{left:237px;top:271px;}
+#tq_2{left:232px;top:280px;letter-spacing:-1.3px;word-spacing:-0.3px;}
+#tr_2{left:476px;top:280px;letter-spacing:-2.6px;}
+#ts_2{left:86px;top:308px;letter-spacing:-2.6px;}
+#tt_2{left:476px;top:308px;letter-spacing:-2.6px;}
+#tu_2{left:86px;top:335px;letter-spacing:-2px;word-spacing:1.1px;}
+#tv_2{left:593px;top:335px;}
+#tw_2{left:606px;top:335px;letter-spacing:-2.6px;}
+#tx_2{left:704px;top:335px;letter-spacing:-1.3px;}
+#ty_2{left:69px;top:362px;letter-spacing:-0.5px;}
+#tz_2{left:86px;top:391px;letter-spacing:-1.1px;word-spacing:-0.4px;}
+#t10_2{left:259px;top:382px;}
+#t11_2{left:255px;top:391px;letter-spacing:-1px;word-spacing:-0.6px;}
+#t12_2{left:389px;top:382px;}
+#t13_2{left:385px;top:391px;letter-spacing:-1.1px;word-spacing:-0.5px;}
+#t14_2{left:464px;top:391px;}
+#t15_2{left:476px;top:391px;letter-spacing:-2.6px;}
+#t16_2{left:86px;top:419px;letter-spacing:-1.5px;word-spacing:0.6px;}
+#t17_2{left:103px;top:446px;letter-spacing:-1px;word-spacing:-1px;}
+#t18_2{left:476px;top:446px;letter-spacing:-2.6px;}
+#t19_2{left:571px;top:446px;letter-spacing:5.1px;}
+#t1a_2{left:103px;top:474px;letter-spacing:-0.9px;word-spacing:-1.1px;}
+#t1b_2{left:237px;top:464px;}
+#t1c_2{left:232px;top:474px;letter-spacing:-1.3px;word-spacing:-0.3px;}
+#t1d_2{left:476px;top:474px;letter-spacing:-2.6px;}
+#t1e_2{left:571px;top:474px;letter-spacing:5.1px;}
+#t1f_2{left:86px;top:501px;letter-spacing:-2.6px;}
+#t1g_2{left:476px;top:501px;letter-spacing:-2.6px;}
+#t1h_2{left:86px;top:528px;letter-spacing:-1.9px;word-spacing:1.6px;}
+#t1i_2{left:593px;top:528px;}
+#t1j_2{left:608px;top:528px;letter-spacing:-2.6px;}
+#t1k_2{left:699px;top:528px;letter-spacing:3px;}
+#t1l_2{left:769px;top:581px;}
+#t1m_2{left:69px;top:602px;letter-spacing:-1.7px;word-spacing:3.7px;}
+#t1n_2{left:326px;top:602px;}
+#t1o_2{left:341px;top:602px;letter-spacing:-0.9px;word-spacing:2.3px;}
+#t1p_2{left:394px;top:604px;letter-spacing:-1.1px;}
+#t1q_2{left:443px;top:597px;}
+#t1r_2{left:439px;top:604px;letter-spacing:-1px;word-spacing:5.1px;}
+#t1s_2{left:716px;top:602px;}
+#t1t_2{left:729px;top:602px;letter-spacing:-2.6px;}
+#t1u_2{left:817px;top:602px;letter-spacing:-1.3px;}
+#t1v_2{left:221px;top:666px;letter-spacing:-1.5px;word-spacing:3.9px;}
+#t1w_2{left:358px;top:666px;letter-spacing:-2.6px;}
+#t1x_2{left:519px;top:681px;letter-spacing:-1px;word-spacing:2.3px;}
+#t1y_2{left:158px;top:724px;letter-spacing:-0.7px;word-spacing:9px;}
+#t1z_2{left:730px;top:710px;}
+#t20_2{left:723px;top:724px;letter-spacing:-0.3px;}
+#t21_2{left:69px;top:762px;letter-spacing:-1.3px;}
+#t22_2{left:192px;top:762px;letter-spacing:-1.1px;word-spacing:4.3px;}
+#t23_2{left:500px;top:752px;}
+#t24_2{left:496px;top:762px;letter-spacing:-1px;word-spacing:3.8px;}
+#t25_2{left:676px;top:752px;}
+#t26_2{left:672px;top:762px;letter-spacing:-1.3px;word-spacing:4.6px;}
+#t27_2{left:69px;top:781px;letter-spacing:-1.1px;word-spacing:5.3px;}
+#t28_2{left:69px;top:800px;letter-spacing:-1px;word-spacing:12.9px;}
+#t29_2{left:235px;top:791px;}
+#t2a_2{left:231px;top:800px;letter-spacing:-1.2px;word-spacing:13.1px;}
+#t2b_2{left:69px;top:820px;letter-spacing:-1.2px;word-spacing:6.5px;}
+#t2c_2{left:313px;top:810px;}
+#t2d_2{left:309px;top:820px;letter-spacing:-1.2px;word-spacing:5.7px;}
+#t2e_2{left:596px;top:810px;}
+#t2f_2{left:591px;top:820px;letter-spacing:-0.9px;word-spacing:6.1px;}
+#t2g_2{left:674px;top:810px;}
+#t2h_2{left:670px;top:820px;letter-spacing:-0.9px;word-spacing:5.3px;}
+#t2i_2{left:759px;top:810px;}
+#t2j_2{left:755px;top:820px;letter-spacing:-1.5px;}
+#t2k_2{left:69px;top:866px;letter-spacing:-1.2px;word-spacing:3.6px;}
+#t2l_2{left:166px;top:866px;letter-spacing:-2.6px;}
+#t2m_2{left:281px;top:866px;letter-spacing:-0.9px;word-spacing:10.5px;}
+#t2n_2{left:394px;top:857px;}
+#t2o_2{left:390px;top:866px;letter-spacing:-0.9px;word-spacing:3.5px;}
+#t2p_2{left:457px;top:857px;}
+#t2q_2{left:453px;top:866px;letter-spacing:-0.8px;word-spacing:2.1px;}
+#t2r_2{left:562px;top:866px;letter-spacing:-2.6px;}
+#t2s_2{left:677px;top:866px;letter-spacing:-0.8px;word-spacing:6.2px;}
+#t2t_2{left:195px;top:882px;letter-spacing:-0.8px;word-spacing:2.3px;}
+#t2u_2{left:597px;top:882px;letter-spacing:-0.7px;word-spacing:1.9px;}
+#t2v_2{left:69px;top:912px;letter-spacing:-1.2px;}
+#t2w_2{left:127px;top:903px;}
+#t2x_2{left:122px;top:912px;letter-spacing:-1.1px;word-spacing:3.8px;}
+#t2y_2{left:263px;top:912px;letter-spacing:-2.6px;}
+#t2z_2{left:391px;top:912px;letter-spacing:-1px;word-spacing:10.9px;}
+#t30_2{left:468px;top:903px;}
+#t31_2{left:463px;top:912px;letter-spacing:-1.1px;word-spacing:3.7px;}
+#t32_2{left:708px;top:912px;letter-spacing:-2.6px;}
+#t33_2{left:836px;top:912px;}
+#t34_2{left:305px;top:928px;letter-spacing:-0.7px;word-spacing:1.9px;}
+#t35_2{left:750px;top:928px;letter-spacing:-0.6px;word-spacing:1.9px;}
+#t36_2{left:69px;top:958px;letter-spacing:-3.3px;}
+#t37_2{left:114px;top:949px;}
+#t38_2{left:111px;top:958px;letter-spacing:-1px;word-spacing:6.5px;}
+#t39_2{left:237px;top:949px;}
+#t3a_2{left:232px;top:958px;letter-spacing:-1.3px;word-spacing:6.6px;}
+#t3b_2{left:291px;top:949px;}
+#t3c_2{left:287px;top:958px;letter-spacing:-1.2px;word-spacing:7.1px;}
+#t3d_2{left:69px;top:1003px;letter-spacing:-1.2px;word-spacing:4px;}
+#t3e_2{left:188px;top:1003px;letter-spacing:-2.6px;}
+#t3f_2{left:316px;top:1003px;letter-spacing:-0.9px;word-spacing:3.1px;}
+#t3g_2{left:498px;top:1003px;letter-spacing:-2.6px;}
+#t3h_2{left:626px;top:1003px;letter-spacing:-0.9px;word-spacing:3.2px;}
+#t3i_2{left:762px;top:994px;}
+#t3j_2{left:758px;top:1003px;letter-spacing:-1.3px;word-spacing:3.5px;}
+#t3k_2{left:231px;top:1020px;letter-spacing:-0.7px;word-spacing:1.9px;}
+#t3l_2{left:540px;top:1020px;letter-spacing:-0.6px;word-spacing:1.9px;}
+#t3m_2{left:69px;top:1049px;letter-spacing:-1.3px;word-spacing:7.1px;}
+#t3n_2{left:309px;top:1040px;}
+#t3o_2{left:305px;top:1049px;letter-spacing:-1.1px;word-spacing:5px;}
+#t3p_2{left:420px;top:1049px;letter-spacing:-1.5px;word-spacing:6.9px;}
+#t3q_2{left:804px;top:1040px;}
+#t3r_2{left:798px;top:1049px;letter-spacing:-1.4px;}
+#t3s_2{left:822px;top:1049px;letter-spacing:-1.5px;}
+#t3t_2{left:69px;top:1095px;letter-spacing:-1.3px;word-spacing:3.9px;}
+#t3u_2{left:69px;top:1132px;letter-spacing:-1px;}
+#t3v_2{left:125px;top:1123px;}
+#t3w_2{left:121px;top:1132px;letter-spacing:-1.3px;word-spacing:7.9px;}
+#t3x_2{left:812px;top:1123px;}
+#t3y_2{left:807px;top:1132px;letter-spacing:-0.8px;word-spacing:7.9px;}
+#t3z_2{left:69px;top:1152px;letter-spacing:-1.1px;word-spacing:6.1px;}
+#t40_2{left:724px;top:466px;letter-spacing:-0.6px;word-spacing:0.9px;}
+#t41_2{left:724px;top:477px;letter-spacing:0.3px;word-spacing:4.9px;}
+#t42_2{left:724px;top:489px;letter-spacing:0.2px;word-spacing:13.4px;}
+#t43_2{left:724px;top:500px;letter-spacing:-0.6px;word-spacing:4.2px;}
+#t44_2{left:809px;top:500px;letter-spacing:-0.4px;}
+#t45_2{left:724px;top:511px;letter-spacing:0.9px;}
+#t46_2{left:759px;top:506px;}
+#t47_2{left:757px;top:511px;letter-spacing:1.1px;}
+#t48_2{left:777px;top:511px;letter-spacing:0.8px;}
+#t49_2{left:796px;top:511px;letter-spacing:1px;}
+#t4a_2{left:813px;top:511px;}
+#t4b_2{left:724px;top:522px;letter-spacing:-0.5px;}
+#t4c_2{left:784px;top:522px;letter-spacing:-0.2px;word-spacing:-0.7px;}
+#t4d_2{left:724px;top:534px;letter-spacing:0.3px;word-spacing:5.2px;}
+#t4e_2{left:724px;top:545px;letter-spacing:0.1px;word-spacing:4.1px;}
+#t4f_2{left:789px;top:539px;}
+#t4g_2{left:786px;top:545px;word-spacing:4px;}
+#t4h_2{left:724px;top:556px;letter-spacing:-0.5px;word-spacing:1.5px;}
+#t4i_2{left:796px;top:551px;}
+#t4j_2{left:793px;top:556px;letter-spacing:-0.3px;word-spacing:1.2px;}
+#t4k_2{left:69px;top:1201px;word-spacing:4.6px;}
+#t4l_2{left:139px;top:1201px;letter-spacing:-0.1px;}
+#t4m_2{left:451px;top:1201px;}
+
+.s1_2{
+	FONT-SIZE: 60.8px;
+	FONT-FAMILY: WtHelveticaMediumkHmAXfg_4i;
+	color: rgb(0,0,0);
+}
+
+.s2_2{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WtRegalIIBookkHmAXfg_4c;
+	color: rgb(0,0,0);
+}
+
+.s3_2{
+	FONT-SIZE: 36.5px;
+	FONT-FAMILY: WtRegalIIBookkHmAXfg_4c;
+	color: rgb(0,0,0);
+}
+
+.s4_2{
+	FONT-SIZE: 36.5px;
+	FONT-FAMILY: WtOnOrnamentkHmAXfg_4k;
+	color: rgb(0,0,0);
+}
+
+.s5_2{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WtUtSerifBookkHmAXfg_4g;
+	color: rgb(0,0,0);
+}
+
+.s6_2{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WtMtBookkHmAXfg_4m;
+	color: rgb(0,0,0);
+}
+
+.s7_2{
+	FONT-SIZE: 49.9px;
+	FONT-FAMILY: WtRegalIIBookkHmAXfg_4c;
+	color: rgb(0,0,0);
+}
+
+.s8_2{
+	FONT-SIZE: 51.7px;
+	FONT-FAMILY: WtRegalIIBookkHmAXfg_4c;
+	color: rgb(0,0,0);
+}
+
+.s9_2{
+	FONT-SIZE: 63.9px;
+	FONT-FAMILY: WtRegalIIBoldkHmAXfg_4a;
+	color: rgb(0,0,0);
+}
+
+.s10_2{
+	FONT-SIZE: 60.8px;
+	FONT-FAMILY: WtRegalIIBoldkHmAXfg_4a;
+	color: rgb(0,0,0);
+}
+
+.s11_2{
+	FONT-SIZE: 60.8px;
+	FONT-FAMILY: WtRegalIIBookkHmAXfg_4c;
+	color: rgb(0,0,0);
+}
+
+.s12_2{
+	FONT-SIZE: 34.7px;
+	FONT-FAMILY: WtRegalIIBookkHmAXfg_4c;
+	color: rgb(0,0,0);
+}
+
+.s13_2{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WtRegalIIItalickHmAXfg_4e;
+	color: rgb(0,0,0);
+}
+
+.s14_2{
+	FONT-SIZE: 36.5px;
+	FONT-FAMILY: WtRegalIIBoldkHmAXfg_4a;
+	color: rgb(0,0,0);
+}
+
+.s15_2{
+	FONT-SIZE: 46.9px;
+	FONT-FAMILY: WtRegalIIBookkHmAXfg_4c;
+	color: rgb(0,0,0);
+}
+
+#form1_2{	z-index:2;	position: absolute;	left:729px;	top:590px;	width:83px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form2_2{	z-index:2;	position: absolute;	left:477px;	top:268px;	width:90px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form3_2{	z-index:2;	position: absolute;	left:477px;	top:295px;	width:90px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form4_2{	z-index:2;	position: absolute;	left:730px;	top:104px;	width:86px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form5_2{	z-index:2;	position: absolute;	left:608px;	top:515px;	width:87px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form6_2{	z-index:2;	position: absolute;	left:477px;	top:237px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form7_2{	z-index:2;	position: absolute;	left:477px;	top:488px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form8_2{	z-index:2;	position: absolute;	left:477px;	top:433px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form9_2{	z-index:2;	position: absolute;	left:477px;	top:460px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form10_2{	z-index:2;	position: absolute;	left:477px;	top:179px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form11_2{	z-index:2;	position: absolute;	left:477px;	top:378px;	width:90px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form12_2{	z-index:2;	position: absolute;	left:607px;	top:321px;	width:93px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form13_2{	z-index:2;	position: absolute;	left:562px;	top:853px;	width:110px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form14_2{	z-index:2;	position: absolute;	left:167px;	top:853px;	width:110px;	height:22px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 19px Arial, Helvetica, sans-serif;}
+#form15_2{	z-index:2;	position: absolute;	left:188px;	top:990px;	width:122px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form16_2{	z-index:2;	position: absolute;	left:498px;	top:990px;	width:124px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form17_2{	z-index:2;	position: absolute;	left:708px;	top:899px;	width:124px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form18_2{	z-index:2;	position: absolute;	left:263px;	top:899px;	width:124px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+#form19_2{	z-index:2;	position: absolute;	left:87px;	top:491px;	width:324px;	height:20px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 18px Arial, Helvetica, sans-serif;}
+#form20_2{	z-index:2;	position: absolute;	left:89px;	top:297px;	width:324px;	height:20px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 18px Arial, Helvetica, sans-serif;}
+#form21_2{	z-index:2;	position: absolute;	left:358px;	top:653px;	width:481px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border:none;	font:normal 21px Arial, Helvetica, sans-serif;}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts2" type="text/css" >
+
+@font-face {
+	font-family: WtOnOrnamentkHmAXfg_4k;
+	src: url("fonts/WtOnOrnamentkHmAXfg_4k.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtHelveticaMediumkHmAXfg_4i;
+	src: url("fonts/WtHelveticaMediumkHmAXfg_4i.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtRegalIIItalickHmAXfg_4e;
+	src: url("fonts/WtRegalIIItalickHmAXfg_4e.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtUtSerifBookkHmAXfg_4g;
+	src: url("fonts/WtUtSerifBookkHmAXfg_4g.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtRegalIIBookkHmAXfg_4c;
+	src: url("fonts/WtRegalIIBookkHmAXfg_4c.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtRegalIIBoldkHmAXfg_4a;
+	src: url("fonts/WtRegalIIBoldkHmAXfg_4a.woff") format("woff");
+}
+
+@font-face {
+	font-family: WtMtBookkHmAXfg_4m;
+	src: url("fonts/WtMtBookkHmAXfg_4m.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2" style="-webkit-user-select: none;"><object width="909" height="1286" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:909px; height:1286px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">CONCILIACI</div>
+<div id="t2_2" class="t s1_2">´</div>
+<div id="t3_2" class="t s1_2">ON</div>
+<div id="t4_2" class="t s2_2">Total de los fondos a comienzo de mes</div>
+<div id="t5_2" class="t s3_2">Esta cifra debe ser la misma que la que se encuentra en el apartado</div>
+<div id="t6_2" class="t s3_2">“Total de los fondos a fin de mes” [cifra (m)], que aparece en la conci-</div>
+<div id="t7_2" class="t s3_2">liaci</div>
+<div id="t8_2" class="t s3_2">´</div>
+<div id="t9_2" class="t s3_2">on del mes anterior.</div>
+<div id="ta_2" class="t s4_2">)</div>
+<div id="tb_2" class="t s2_2">$</div>
+<div id="tc_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="td_2" class="t s2_2">(h)</div>
+<div id="te_2" class="t s1_2">RECIBIDO:</div>
+<div id="tf_2" class="t s2_2">Recibido por la congregaci</div>
+<div id="tg_2" class="t s2_2">´</div>
+<div id="th_2" class="t s2_2">on [total (b) de la p</div>
+<div id="ti_2" class="t s2_2">´</div>
+<div id="tj_2" class="t s2_2">agina 1] $</div>
+<div id="tk_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="tl_2" class="t s2_2">Recibido de las cajas de contribuciones:</div>
+<div id="tm_2" class="t s2_2">para la obra mundial</div>
+<div id="tn_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="to_2" class="t s2_2">para la construcci</div>
+<div id="tp_2" class="t s2_2">´</div>
+<div id="tq_2" class="t s2_2">on mundial de Salones del Reino</div>
+<div id="tr_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="ts_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="tt_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="tu_2" class="t s2_2">Total recibido</div>
+<div id="tv_2" class="t s2_2">$</div>
+<div id="tw_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="tx_2" class="t s2_2">(i)</div>
+<div id="ty_2" class="t s1_2">DESEMBOLSOS:</div>
+<div id="tz_2" class="t s2_2">Gastos de la congregaci</div>
+<div id="t10_2" class="t s2_2">´</div>
+<div id="t11_2" class="t s2_2">on [total (c) de la p</div>
+<div id="t12_2" class="t s2_2">´</div>
+<div id="t13_2" class="t s2_2">agina 1]</div>
+<div id="t14_2" class="t s2_2">$</div>
+<div id="t15_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t16_2" class="t s2_2">Enviado de las cajas de contribuciones:</div>
+<div id="t17_2" class="t s2_2">para la obra mundial</div>
+<div id="t18_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t19_2" class="t s2_2">(j)</div>
+<div id="t1a_2" class="t s2_2">para la construcci</div>
+<div id="t1b_2" class="t s2_2">´</div>
+<div id="t1c_2" class="t s2_2">on mundial de Salones del Reino</div>
+<div id="t1d_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1e_2" class="t s2_2">(k)</div>
+<div id="t1f_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1g_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1h_2" class="t s2_2">Total de desembolsos</div>
+<div id="t1i_2" class="t s2_2">$</div>
+<div id="t1j_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1k_2" class="t s2_2">(l)</div>
+<div id="t1l_2" class="t s4_2">.</div>
+<div id="t1m_2" class="t s2_2">Total de los fondos a fin de mes [(h)</div>
+<div id="t1n_2" class="t s6_2">±</div>
+<div id="t1o_2" class="t s2_2">(i) – (l)]</div>
+<div id="t1p_2" class="t s7_2">(transfi</div>
+<div id="t1q_2" class="t s7_2">´</div>
+<div id="t1r_2" class="t s7_2">eralos al mes siguiente)</div>
+<div id="t1s_2" class="t s2_2">$</div>
+<div id="t1t_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1u_2" class="t s2_2">(m)</div>
+<div id="t1v_2" class="t s2_2">Siervo de cuentas:</div>
+<div id="t1w_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t1x_2" class="t s8_2">(Firma y nombre legible)</div>
+<div id="t1y_2" class="t s9_2">ANUNCIO MENSUAL DE LAS CUENTAS DE LA CONGREGACI</div>
+<div id="t1z_2" class="t s9_2">´</div>
+<div id="t20_2" class="t s9_2">ON</div>
+<div id="t21_2" class="t s10_2">Instrucciones:</div>
+<div id="t22_2" class="t s11_2">Este anuncio debe leerse a la congregaci</div>
+<div id="t23_2" class="t s11_2">´</div>
+<div id="t24_2" class="t s11_2">on en la segunda Reuni</div>
+<div id="t25_2" class="t s11_2">´</div>
+<div id="t26_2" class="t s11_2">on de Servicio de cada</div>
+<div id="t27_2" class="t s11_2">mes por el hermano encargado de la primera parte de esa semana. Si no es posible leerlo (por ejemplo,</div>
+<div id="t28_2" class="t s11_2">porque la congregaci</div>
+<div id="t29_2" class="t s11_2">´</div>
+<div id="t2a_2" class="t s11_2">on tiene asamblea esa semana), puede hacerse el anuncio la semana siguiente.</div>
+<div id="t2b_2" class="t s11_2">No deben leerse a la congregaci</div>
+<div id="t2c_2" class="t s11_2">´</div>
+<div id="t2d_2" class="t s11_2">on estas instrucciones ni la informaci</div>
+<div id="t2e_2" class="t s11_2">´</div>
+<div id="t2f_2" class="t s11_2">on que est</div>
+<div id="t2g_2" class="t s11_2">´</div>
+<div id="t2h_2" class="t s11_2">a entre par</div>
+<div id="t2i_2" class="t s11_2">´</div>
+<div id="t2j_2" class="t s11_2">entesis.</div>
+<div id="t2k_2" class="t s2_2">En el mes de</div>
+<div id="t2l_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t2m_2" class="t s2_2">, la congregaci</div>
+<div id="t2n_2" class="t s2_2">´</div>
+<div id="t2o_2" class="t s2_2">on recibi</div>
+<div id="t2p_2" class="t s2_2">´</div>
+<div id="t2q_2" class="t s2_2">o un total de $</div>
+<div id="t2r_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t2s_2" class="t s2_2">. Los gastos de la con-</div>
+<div id="t2t_2" class="t s12_2">(Mes pasado)</div>
+<div id="t2u_2" class="t s12_2">[Cifra (b)]</div>
+<div id="t2v_2" class="t s2_2">gregaci</div>
+<div id="t2w_2" class="t s2_2">´</div>
+<div id="t2x_2" class="t s2_2">on ascendieron a $</div>
+<div id="t2y_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t2z_2" class="t s2_2">. Esto dej</div>
+<div id="t30_2" class="t s2_2">´</div>
+<div id="t31_2" class="t s2_2">o un balance de final de mes de $</div>
+<div id="t32_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t33_2" class="t s2_2">.</div>
+<div id="t34_2" class="t s12_2">[Cifra (c)]</div>
+<div id="t35_2" class="t s12_2">[Cifra (e)]</div>
+<div id="t36_2" class="t s2_2">Adem</div>
+<div id="t37_2" class="t s2_2">´</div>
+<div id="t38_2" class="t s2_2">as, la congregaci</div>
+<div id="t39_2" class="t s2_2">´</div>
+<div id="t3a_2" class="t s2_2">on envi</div>
+<div id="t3b_2" class="t s2_2">´</div>
+<div id="t3c_2" class="t s2_2">o las donaciones de las cajas de contribuciones a la sucursal. Las cifras son</div>
+<div id="t3d_2" class="t s2_2">las siguientes: $</div>
+<div id="t3e_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t3f_2" class="t s2_2">para la obra mundial y $</div>
+<div id="t3g_2" class="t s5_2">±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±</div>
+<div id="t3h_2" class="t s2_2">para la construcci</div>
+<div id="t3i_2" class="t s2_2">´</div>
+<div id="t3j_2" class="t s2_2">on mundial</div>
+<div id="t3k_2" class="t s12_2">[Cifra (j)]</div>
+<div id="t3l_2" class="t s12_2">[Cifra (k)]</div>
+<div id="t3m_2" class="t s2_2">de Salones del Reino. Se colocar</div>
+<div id="t3n_2" class="t s2_2">´</div>
+<div id="t3o_2" class="t s2_2">a una copia del</div>
+<div id="t3p_2" class="t s13_2">Informe mensual de las cuentas de la congregaci</div>
+<div id="t3q_2" class="t s13_2">´</div>
+<div id="t3r_2" class="t s13_2">on</div>
+<div id="t3s_2" class="t s2_2">en</div>
+<div id="t3t_2" class="t s2_2">el tablero de anuncios.</div>
+<div id="t3u_2" class="t s11_2">(Despu</div>
+<div id="t3v_2" class="t s11_2">´</div>
+<div id="t3w_2" class="t s11_2">es de los anuncios, devuelva este informe al coordinador del cuerpo de ancianos para que</div>
+<div id="t3x_2" class="t s11_2">´</div>
+<div id="t3y_2" class="t s11_2">el lo</div>
+<div id="t3z_2" class="t s11_2">coloque en el tablero de anuncios.)</div>
+<div id="t40_2" class="t s3_2">Nota: Esta cantidad debe</div>
+<div id="t41_2" class="t s3_2">ser igual a la del “Total</div>
+<div id="t42_2" class="t s3_2">de los fondos a fin de</div>
+<div id="t43_2" class="t s3_2">mes” del recuadro</div>
+<div id="t44_2" class="t s14_2">“Con-</div>
+<div id="t45_2" class="t s14_2">ciliaci</div>
+<div id="t46_2" class="t s14_2">´</div>
+<div id="t47_2" class="t s14_2">on</div>
+<div id="t48_2" class="t s14_2">de</div>
+<div id="t49_2" class="t s14_2">la</div>
+<div id="t4a_2" class="t s14_2">hoja</div>
+<div id="t4b_2" class="t s14_2">de cuentas”</div>
+<div id="t4c_2" class="t s3_2">(S-26), y a la</div>
+<div id="t4d_2" class="t s3_2">cantidad de “Fondos de</div>
+<div id="t4e_2" class="t s3_2">la congregaci</div>
+<div id="t4f_2" class="t s3_2">´</div>
+<div id="t4g_2" class="t s3_2">on a fin de</div>
+<div id="t4h_2" class="t s3_2">mes” (e), de la p</div>
+<div id="t4i_2" class="t s3_2">´</div>
+<div id="t4j_2" class="t s3_2">agina 1.</div>
+<div id="t4k_2" class="t s15_2">S-30-S Co</div>
+<div id="t4l_2" class="t s15_2">3/13</div>
+<div id="t4m_2" class="t s15_2">2</div>
+
+<!-- End text definitions -->
+
+
+<!-- Begin Form Data -->
+<form>
+<input type="text"  tabindex="14"  id="form1_2" value="" data-objref="45 0 R" title="undefined"  data-field-name="undefined_7"/>
+<input type="text"  tabindex="4"  id="form2_2" value="" data-objref="36 0 R" title="on mundial de Salones del Reino [1]"  data-field-name="on mundial de Salones del Reino 1"/>
+<input type="text"  tabindex="6"  id="form3_2" value="" data-objref="37 0 R" title="on mundial de Salones del Reino [2]"  data-field-name="on mundial de Salones del Reino 2"/>
+<input type="text"  tabindex="1"  id="form4_2" value="" data-objref="32 0 R" title="undefined"  data-field-name="undefined_2"/>
+<input type="text"  tabindex="13"  id="form5_2" value="" data-objref="44 0 R" title="undefined"  data-field-name="undefined_6"/>
+<input type="text"  tabindex="3"  id="form6_2" value="" data-objref="34 0 R" title="undefined"  data-field-name="undefined_3"/>
+<input type="text"  tabindex="12"  id="form7_2" value="" data-objref="43 0 R" title="on mundial de Salones del Reino [2]"  data-field-name="on mundial de Salones del Reino 2_2"/>
+<input type="text"  tabindex="9"  id="form8_2" value="" data-objref="40 0 R" title="j"  data-field-name="j"/>
+<input type="text"  tabindex="10"  id="form9_2" value="" data-objref="41 0 R" title="on mundial de Salones del Reino [1]"  data-field-name="on mundial de Salones del Reino 1_2"/>
+<input type="text"  tabindex="2"  id="form10_2" value="" data-objref="33 0 R" title="agina 1"  data-field-name="agina 1"/>
+<input type="text"  tabindex="8"  id="form11_2" value="" data-objref="39 0 R" title="undefined"  data-field-name="undefined_5"/>
+<input type="text"  tabindex="7"  id="form12_2" value="" data-objref="38 0 R" title="undefined"  data-field-name="undefined_4"/>
+<input type="text"  tabindex="17"  id="form13_2" value="" data-objref="48 0 R" title="o un total de"  data-field-name="o un total de"/>
+<input type="text"  tabindex="16"  id="form14_2" value="" data-objref="47 0 R" title="En el mes de"  data-field-name="En el mes de"/>
+<input type="text"  tabindex="20"  id="form15_2" value="" data-objref="51 0 R" title="las siguientes"  data-field-name="las siguientes"/>
+<input type="text"  tabindex="21"  id="form16_2" value="" data-objref="52 0 R" title="para la obra mundial y"  data-field-name="para la obra mundial y"/>
+<input type="text"  tabindex="19"  id="form17_2" value="" data-objref="50 0 R" title="o un balance de final de mes de"  data-field-name="o un balance de final de mes de"/>
+<input type="text"  tabindex="18"  id="form18_2" value="" data-objref="49 0 R" title="on ascendieron a"  data-field-name="on ascendieron a"/>
+<input type="text"  tabindex="11"  id="form19_2" value="" data-objref="42 0 R" title="para la construcci"  data-field-name="para la construcci_2"/>
+<input type="text"  tabindex="5"  id="form20_2" value="" data-objref="35 0 R" title="para la construcci"  data-field-name="para la construcci"/>
+<input type="text"  tabindex="15"  id="form21_2" value="" data-objref="46 0 R" title="Siervo de cuentas"  data-field-name="Siervo de cuentas"/>
+
+</form>
+<!-- End Form Data -->
+<!--[if lt IE 9]><script type="text/javascript">
+(function(divCount, pageNum) {
+for (var i = 1; i < divCount; i++) {
+    var div = document.getElementById('t' + i.toString(36) + '_' + pageNum);
+    if (div !== null) {
+        div.style.top = (div.offsetTop * 4) + 'px';
+        div.style.left = (div.offsetLeft * 4) + 'px';
+        div.style.zoom = '25%';
+    }
+}
+})(167, 2);
+</script><![endif]-->
+
+</div>
+</body>
+</html>
