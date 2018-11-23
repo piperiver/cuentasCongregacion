@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth'], function ()
   Route::post('usuario/permisos', 'UserController@permisos');
   Route::get('pruebaPermisos', 'Permisos_userController@permisoParaSeguir');
   Route::get('/home', 'HomeController@index')->name('home');
+  Route::get('migrarFechaCompuesta', 'CongregacionController@migrarFechaCompuesta');
 
 });
 
