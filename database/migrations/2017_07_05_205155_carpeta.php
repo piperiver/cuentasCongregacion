@@ -21,6 +21,7 @@ class Carpeta extends Migration
         $table->integer('mes');
         $table->float('vlrInicioMes', 8, 2)->default(0);
         $table->float('balance', 8, 2)->default(0);
+        $table->timestamp('fechaCompuesta')->nullable();        
         $table->float('obraMundial', 8, 2)->default(0);
         $table->float('totalGastos', 8, 2)->default(0);
         $table->float('resolucionSalones', 8, 2)->default(0);
